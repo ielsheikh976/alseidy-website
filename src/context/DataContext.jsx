@@ -10,8 +10,9 @@ export const DataProvider = ({children}) => {
 
     const fetchAllProducts = async () => {
         try {
-            const res = await axios.get('https://fakestoreapi.com/products')
-            console.log(res);
+            const res = await axios.get('https://dummyjson.com/products?limit=0&skip=0')
+            const productData = res.data.products
+            setData(productData);
         } catch (error){
             console.log(error)
         }
