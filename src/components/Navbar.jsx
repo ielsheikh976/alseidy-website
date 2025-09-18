@@ -4,8 +4,8 @@ import {IoCartOutline} from "react-icons/io5";
 
 const Navbar = () => {
     return (
-        <div className="bg-white py-3 shadow-2xl font-oswald">
-            <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="bg-white py-3 shadow-2xl font-oswald sticky top-0 z-50">
+            <div className="flex items-center justify-between container">
                 {/*logo section*/}
                 <div className="flex gap-7 items-center ">
                     <Link to={'/'}><h1 className="font-bold text-3xl text-primary">
