@@ -6,12 +6,14 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Cart from "./pages/Cart.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Category from "./components/Category.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Navbar />
+            <Navbar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<Products/>}/>
@@ -19,6 +21,7 @@ const App = () => {
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/cart" element={<Cart/>}/>
             </Routes>
+            <Footer/>
         </BrowserRouter>
     )
 }

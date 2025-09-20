@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
-import Category from "./Category.jsx";
 
 
 const Carousel = () => {
@@ -58,7 +57,7 @@ const Carousel = () => {
                 <div className="container pb-8 sm:pb-0">
 
                     <Slider {...settings}>
-                        {data?.filter((item) => item.category === "smartphones").slice(0, 8)?.map((item, index) => {
+                        {data?.filter((item) => item.category === "smartphones").slice(0, 10)?.map((item, index) => {
                             return <div key={index}>
                                 <div className="flex gap-10 justify-center h-[600px] items-center px-4">
                                     <div className="space-y-6">
@@ -79,9 +78,10 @@ const Carousel = () => {
                         })}
 
                     </Slider>
-                    <Category/>
                 </div>
+
             </div>
+
 
         </div>
     )
