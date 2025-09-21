@@ -40,7 +40,7 @@ const Features = () => {
                         {FeaturesData.map((data, index) => {
                             return <div key={index}
                                         className="flex items-center justify-center text-center sm:text-left">
-                                <data.icon className="flex-shrink-0 h-10 w-10 text-gray-600" aria-hidden="true"/>
+                                <data.icon className="flex-shrink-0 h-10 w-10 text-gray-600"/>
                                 <div className="ml-4">
                                     <p className="text-base font-medium text-gray-600">{data.text}</p>
                                     <p className="text-gray-500 text-sm mt-1">{data.subtext}</p>

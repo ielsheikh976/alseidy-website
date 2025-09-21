@@ -12,13 +12,27 @@ export const DataProvider = ({children}) => {
         try {
             const res = await axios.get('https://dummyjson.com/products?limit=0&skip=0')
             const productData = res.data.products
-            setData(productData);
+            const filteredProducts = productData.filter((item) =>
+                ["smartphones", "laptops", "mens-watches", "mobile-accessories", "sports-accessories", "tablets", "womens-watches"].includes(item.category)
+            );
+            setData(filteredProducts);
         } catch (error){
             console.log(error)
         }
     }
 
-    return <DataContext.Provider value={{data, setData, fetchAllProducts}}>
+    const getUniqueCategory = (data, property) => {
+        let newVal = data?.map((curElem) => {
+            return curElem[property];
+        })
+        newVal = ["ALL" ,...new Set(newVal)]
+        return newVal;
+    }
+
+    const categoryOnlyData = ["all" ,"smartphones", "laptops", "mens-watches", "mobile-accessories", "sports-accessories", "tablets", "womens-watches"]
+    const brandOnlyData = getUniqueCategory(data, "brand");
+
+    return <DataContext.Provider value={{data, setData, fetchAllProducts, categoryOnlyData, brandOnlyData}}>
         {children}
     </DataContext.Provider>
 }

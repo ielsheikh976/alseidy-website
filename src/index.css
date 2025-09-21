@@ -23,3 +23,10 @@
         @apply bg-brandGreen text-white px-3 py-1 rounded-md cursor-pointer mt-2 hover:scale-105 duration-300
     }
 }
+
+input {
+    background-color: #ffffff;
+    accent-color: #556E53;
+    border: 1px solid #ccc;
+    color: #333;
+}

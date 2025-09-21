@@ -6,7 +6,7 @@ import tablet from '../assets/tablet.jpg'
 import accessories from '../assets/accessories.jpg'
 import headphone from '../assets/headphone.jpg'
 import watch from '../assets/smart-watch.jpg'
-import camera from '../assets/camera.jpg'
+import appliances from '../assets/appliances.jpg'
 import gaming from '../assets/gaming.jpg'
 
 const categories = [
@@ -16,7 +16,7 @@ const categories = [
     {name: "Accessories", img: accessories},
     {name: "Headphones", img: headphone},
     {name: "Watches", img: watch},
-    {name: "Cameras", img: camera},
+    {name: "Appliances", img: appliances},
     {name: "Gaming", img: gaming},
 ];
 
