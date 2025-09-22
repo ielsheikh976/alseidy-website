@@ -29,7 +29,7 @@ export const DataProvider = ({children}) => {
         return newVal;
     }
 
-    const categoryOnlyData = ["all" ,"smartphones", "laptops", "mens-watches", "mobile-accessories", "sports-accessories", "tablets", "womens-watches"]
+    const categoryOnlyData = ["ALL" ,"smartphones", "laptops", "mens-watches", "mobile-accessories", "sports-accessories", "tablets", "womens-watches"]
     const brandOnlyData = getUniqueCategory(data, "brand");
 
     return <DataContext.Provider value={{data, setData, fetchAllProducts, categoryOnlyData, brandOnlyData}}>
